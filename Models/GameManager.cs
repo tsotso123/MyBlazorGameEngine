@@ -72,7 +72,7 @@ namespace game.Models
             
             enemySpawner = new EnemySpawner(this, [
 
-                new EnemyWave(0.2f,9,"Demon"),
+                new EnemyWave(0.2f,1,"Demon"),
                 // after 5 seconds spawn 3 demon
                  // after 10 seconds spawn 6 assassin... etc
 

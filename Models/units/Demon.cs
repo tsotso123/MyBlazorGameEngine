@@ -68,6 +68,7 @@ namespace game.Models.units
                             projectile.AmIEnemy = AmIEnemy;
                             projectile.AttackKnockBack = attackKnockBack;
                             projectile.AttackKnockSpeed = attackKnockSpeed;
+                            projectile.Aoe = 1;
                             //Gamemanager.AddProjectile(projectile);
                             Gamemanager.PostFrameActions.Enqueue(() =>
                             {

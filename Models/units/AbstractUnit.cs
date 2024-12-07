@@ -121,7 +121,7 @@ namespace game.Models.units
 
             if (!AmIEnemy)
             {
-                //Console.WriteLine("hp:" + Hp);
+                Console.WriteLine("hp:" + Hp);
             }
 
             if (!knockedBack)

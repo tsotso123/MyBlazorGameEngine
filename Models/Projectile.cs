@@ -121,7 +121,7 @@ namespace game.Models
             for (int i = 0;i< UnitsHitCooldownTracker.Count;i++)
             {
                 UnitsHitCooldownTracker[i]++;
-                if (UnitsHitCooldownTracker[i]==AtkCooldown)
+                if (UnitsHitCooldownTracker[i]>=AtkCooldown)
                 {
                     AlreadyHitByProjectilesUnits.RemoveAt(i);
                     UnitsHitCooldownTracker.RemoveAt(i);
