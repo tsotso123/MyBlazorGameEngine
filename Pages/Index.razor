@@ -1,0 +1,47 @@
+﻿@page "/"
+
+@inject IJSRuntime JS
+
+<h3>Simple Game</h3>
+
+
+
+@code {
+  
+    //private static Models.GameManager gm;
+
+    GameManager gm;
+
+
+    public JsRenderer jsRenderer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Initialize the renderer, pass the JS runtime
+        jsRenderer = new JsRenderer(JS);
+        
+        gm = new GameManager(jsRenderer);
+        gm.StartGameLoop();
+
+        
+    }
+
+
+    [JSInvokable]
+    public static async Task HandleClick(int x, int y)
+    {
+        await Models.InputPropagator.HandleClick(x, y);
+    }
+
+    [JSInvokable]
+    public static async Task HandleKeyDown(string key)
+    {
+        await Models.InputPropagator.HandleKeyDown(key);
+    }
+
+    [JSInvokable]
+    public static async Task HandleKeyUp(string key)
+    {
+        await Models.InputPropagator.HandleKeyUp(key);
+    }
+}
