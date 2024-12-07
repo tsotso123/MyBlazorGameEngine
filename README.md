@@ -1,3 +1,4 @@
 # game
 
-![alt text]([http://url/to/img.png](https://imgur.com/a/uWg2WLq))
+
+![Screenshot 2024-12-07 222726](https://github.com/user-attachments/assets/0b055237-a4a1-4e01-b72c-ed5cd8ed2896)
